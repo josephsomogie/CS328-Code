@@ -71,9 +71,6 @@ void loop(){
 // Rotate the motor in a clockwise fashion
 void Forward(int &lSpeed, int &rSpeed, int rpmR, int rpmL)
 {
-if(rpmR > rpmL) {--rSpeed; ++lSpeed;}
-else if(rpmL > rpmR) {--lSpeed; ++rSpeed;}
-
   analogWrite(MotorPWM_A, lSpeed);
   analogWrite(MotorPWM_B, rSpeed);
 
