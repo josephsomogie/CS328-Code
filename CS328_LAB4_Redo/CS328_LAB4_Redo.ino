@@ -51,20 +51,22 @@ void setup() {
 }
 void loop(){
  
-  if(PWM_Speed < 255){PWM_Speed+=5;}
+  
    countOne=0;
    countTwo=0;
    delay(100);
+    
+   Forward(LeftSpeed, RightSpeed, countOne, countTwo);
+ 
+    /*
     rpmRight = countOne*rotation;
     rpmLeft = countTwo*rotation;
-   //Forward(LeftSpeed, RightSpeed, countOne, countTwo);
-    Forward(PWM_Speed);
     Serial.println("PWM: ");
     Serial.print(PWM_Speed);
     Serial.println("RPM Right: ");
     Serial.print(rpmRight);
     Serial.println("RPM Left: ");
-    Serial.print(rpmLeft);
+    Serial.print(rpmLeft);*/
 }
 // Method: Forward
 // Input: speed – value [0-255]
